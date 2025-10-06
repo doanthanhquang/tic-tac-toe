@@ -1,0 +1,82 @@
+.game {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 24px;
+  max-width: 900px;
+  /* margin: 0 auto; */
+  height: calc(56px * 3 + 2px);
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  color: #111;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 56px;
+  height: 56px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 56px;
+  cursor: pointer;
+}
+
+.square.highlight {
+  background: #fffbcc;
+  border-color: #f5c518;
+}
+
+.game-info {
+  width: 280px; 
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.status {
+  margin-bottom: 8px;
+  font-weight: 600;
+  min-height: 24px;
+}
+
+.game-board {
+  width: calc(56px * 3 + 2px);
+  height: calc(56px * 3 + 2px);
+  flex-shrink: 0;
+}
+
+.game-info ol {
+  overflow: visible;
+  margin: 8px 0 0;
+  padding-left: 16px;
+  list-style-position: inside;
+}
+
+html {
+  scrollbar-gutter: stable both-edges;
+}
+
+.game-info button,
+.game-info .current-move {
+  display: inline-block;
+}
+
+.sort {
+  margin-bottom: 8px;
+  min-height: 32px; 
+}
+
+.current-move {
+  font-style: italic;
+}
